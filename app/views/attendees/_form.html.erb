@@ -1,10 +1,10 @@
-<%= form_for :attendees do |form| %>
+<%= form_for :attendee do |form| %>
 
   <%= render 'error_messages' %>
 
   <div class = "field">
     <%= form.label :email %>
-    <%= form.text_field :email, id: :event_email %>
+    <%= form.text_field :email %>
   </div>
 
   <div class = "field">

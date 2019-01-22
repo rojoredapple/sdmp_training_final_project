@@ -5,7 +5,8 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find params[:id]
+    @event = Event.find(params[:id])
+    @attendees = @event.attendees
   end
 
   def new
@@ -26,7 +27,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @event = Event.find params[:id]
+    @event = Event.find(params[:id])
 
     @event.destroy
     respond_to do |format|
@@ -37,6 +38,6 @@ class EventsController < ApplicationController
   private
 
     def event_params
-      params.require(:event).permit(:name, :start_time, :end_time)
+      params.require(:event).permit(:name, :start_time, :end_time, attendees_attributes: [:id, :email, :created_at ])
     end
 end

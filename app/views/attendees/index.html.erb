@@ -12,9 +12,9 @@
   <tbody>
   <% @attendees.each do |attendee| %>
     <tr>
-      <td><%= attendee.name %></td>
+      <td><%= attendee.email %></td>
       <td><%= attendee.created_at %></td>
-      <td><%= link_to "Show", attendee %></td>
+      <td><%= link_to "Show", event_attendees_path %></td>
     </tr>
   <% end %>
   </tbody>

@@ -17,7 +17,7 @@
 </p>
 
 <% if @event.attendees.any? %>
-  <h3> Attendees (<%= @event.attendees.count %>) </h3>
+  <h3> Attendees (<%= @event.attendees.count %>)</h3>
   <ol class = "attendees" >
     <%= render @attendees %>
   </ol>

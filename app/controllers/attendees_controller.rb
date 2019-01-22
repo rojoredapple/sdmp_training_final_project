@@ -17,7 +17,7 @@ class AttendeesController < ApplicationController
 
     respond_to do |format|
       if @attendee.save
-        format.html { redirect_to event_attendees_path, notice: "Check in was successful." }
+        format.html { redirect_to root_path, notice: "Check in was successful." }
       else
         format.html { render :new }
       end
