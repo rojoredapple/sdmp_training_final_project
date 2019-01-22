@@ -1,0 +1,23 @@
+<%= form_for :attendee do |form| %>
+
+  <%= render 'error_messages' %>
+
+  <div class = "field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :event_email %>
+  </div>
+
+  <div class = "field">
+    <%= form.label "List of Events" %>
+    <%= form.collection_radio_buttons :event_id, Event.all, :id, :name do |b| %>
+      <div class = "collection-radio-button">
+        <%= b.radio_button %>
+        <%= b.label %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class = "actions">
+    <%= form.submit "Check into Event", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,2 +1,6 @@
-<h1>Attendees#new</h1>
-<p>Find me in app/views/attendees/new.html.erb</p>
+<% provide(:title, "Check into Event") %>
+<h1> Create Event </h1>
+
+<%= render "form", attendee: @attendee %>
+
+<%= link_to "Back", root_path %>

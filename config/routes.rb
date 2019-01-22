@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   end
 
   root 'events#index'
-  get 'attendees/new'
-  get 'events/new'
+  get '/create_event', to: 'events#new'
+  get '/check_into_event', to: 'attendees#new'
+  post '/check_into_event', to: 'attendees#create'
 end

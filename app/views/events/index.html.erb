@@ -17,9 +17,13 @@
       <td><%= event.start_time %></td>
       <td><%= event.end_time %></td>
       <td><%= link_to "Show", event %></td>
-      <td><%= link_to "Edit", edit_event_path(event) %></td>
       <td><%= link_to "Cancel", event, method: :delete, data: { confirm: "Are you sure?" } %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+
+
+<p><%= link_to "Create New Event", create_event_path, class: "btn btn-large btn-primary" %>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<%= link_to "Check into Event", check_into_event_path, class: "btn btn-large btn-primary" %></p>

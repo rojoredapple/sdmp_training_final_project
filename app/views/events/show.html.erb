@@ -1,0 +1,19 @@
+<% provide(:title, @event.name) %>
+  <p id = "notice"><%= notice %></p>
+
+<p>
+  <strong> Name: </strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong> Start Time: </strong>
+  <%= @event.start_time %>
+</p>
+
+<p>
+  <strong> End Time: </strong>
+  <%= @event.end_time %>
+</p>
+
+<%= link_to 'Back', root_path %>
